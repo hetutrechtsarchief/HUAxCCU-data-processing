@@ -1,0 +1,1 @@
+./personen.py > tmp.ttl && ttl tmp.ttl && subl tmp.ttl

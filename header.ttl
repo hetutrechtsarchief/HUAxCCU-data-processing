@@ -1,0 +1,23 @@
+@prefix id: <https://ccu.hualab.nl/id/> .
+@prefix def: <https://ccu.hualab.nl/def/> . #def
+
+@prefix entries: <https://ccu.hualab.nl/id/entries/> . #id
+@prefix occupations: <https://ccu.hualab.nl/id/occupations/> . #id
+@prefix crimes: <https://ccu.hualab.nl/id/crimes/> . #id
+@prefix punishments: <https://ccu.hualab.nl/id/occupations/> . #id
+@prefix locations: <https://ccu.hualab.nl/id/locations/> . #id
+@prefix scans: <https://ccu.hualab.nl/id/scans/> . #id
+@prefix series: <https://ccu.hualab.nl/id/series/> . #id
+#@prefix persons: <https://ccu.hualab.nl/id/persons/> . #id
+@prefix convicts: <https://ccu.hualab.nl/id/convicts/> . #id
+@prefix leaveCauses: <https://ccu.hualab.nl/id/leaveCauses/> . #id
+
+@prefix sdo: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hisco: <https://iisg.amsterdam/resource/hisco/code/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix pnv: <https://w3id.org/pnv#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .

@@ -1,0 +1,72 @@
+@prefix id: <https://ccu.hualab.nl/id/> .
+@prefix def: <https://ccu.hualab.nl/def/> . #def
+
+@prefix entries: <https://ccu.hualab.nl/id/entries/> . #id
+@prefix occupations: <https://ccu.hualab.nl/id/occupations/> . #id
+@prefix crimes: <https://ccu.hualab.nl/id/crimes/> . #id
+@prefix punishments: <https://ccu.hualab.nl/id/occupations/> . #id
+@prefix locations: <https://ccu.hualab.nl/id/locations/> . #id
+@prefix scans: <https://ccu.hualab.nl/id/scans/> . #id
+@prefix series: <https://ccu.hualab.nl/id/series/> . #id
+@prefix persons: <https://ccu.hualab.nl/id/persons/> . #id
+#@prefix convicts: <https://ccu.hualab.nl/id/convicts/> . #id
+@prefix leaveCauses: <https://ccu.hualab.nl/id/leaveCauses/> . #id
+
+@prefix sdo: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hisco: <https://iisg.amsterdam/resource/hisco/code/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix pnv: <https://w3id.org/pnv#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+entries:1 a def:Entry ;
+  rdfs:label "Theodorus van Zijl: politie overtreding" ;
+  def:serie series:gansstraat-1910-1920 ;
+  def:convict persons:96c0693a55b60f51de7787e907615e69 ;
+  def:crime "politie overtreding", crimes:politie-overtreding ; 
+  def:occupation "koopman in groenten", hisco:hisco\/62730 ; # need to escape slashes
+  def:age "31"^^xsd:integer ;
+  def:punishment "A hechtenis 6 dagen", punishments:hechtenis ;
+  def:fromDate "1911-03-29"^^xsd:date ;
+  def:toDate "1911-04-04"^^xsd:date ;
+  def:durationDays "6"^^xsd:integer ;
+  def:leaveDate "1911-03-13"^^xsd:date ;
+  def:leaveCause "wegens betaling der confiscatie ad f 0,50 van 1 dag hechtenis bevrijd" leaveCauses:confiscatie-betaald;
+  def:transitTo "Strafgevangenis Utrecht", locations:strafgevangenis-utrecht ;
+  def:scan scans:NL-UtHUA_A362667_000039.jpg .
+
+occupations:koopman a sdo:Occupation ;
+  owl:sameAs hisco:hisco\/62730 .
+
+scans:NL-UtHUA_A362667_000039.jpg a def:Scan ;
+  rdfs:label "NL-UtHUA_A362667_000039.jpg" ;
+  sdo:image <https://images.hualab.nl/f0704aed43056d36d93b5f13344f8018> .
+
+series:gansstraat-1910-1920 a def:Serie ;
+  rdfs:label "Gansstraat 1910-1920" .
+
+locations:strafgevangenis-utrecht a def:Location ;
+  rdfs:label "Strafgevangenis Utrecht" ;
+  skos:altLabel "In transport. Strafgevangenis te Utrecht", "Naar de Strafgevangenis te Utrecht" , "Nar de strafgevangenis te Utrecht", "strafgev. Utr." ;
+  sdo:image <https://proxy.archieven.nl/thumb/39/5AAB899F71B55A51BB98305DDD7F53D6> .
+
+persons:96c0693a55b60f51de7787e907615e69 a sdo:Person ;
+  rdfs:label "Theodorus van Zijl" ;
+  pnv:givenName "Theodorus" ;
+  pnv:literalName "van Zijl" ;
+  pnv:surnamePrefix "van" ;
+  sdo:birthDate "1879-07-03"^^xsd:date ;
+  sdo:birthPlace wd:Q803 , "Utrecht"  .
+
+wd:Q803 a sdo:Place ; rdfs:label "Utrecht" ; geo:asWKT "Point(4.86 52.33)"^^geo:wktLiteral . 
+
+def:Entry rdfs:label "Inschrijving in Gevangenisregister" .
+
+crimes:politie-overtreding rdfs:label "Politie overtreding" .
+
+leaveCauses:confiscatie-betaald rdfs:label "Confiscatie betaald" .
+leaveCauses:op-transport rdfs:label "Op transport" .
+
